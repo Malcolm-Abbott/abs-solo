@@ -7,15 +7,15 @@ export function NavBar() {
       <div className="container py-4 px-6">
         <header>
           <div className="flex justify-between">
-            <div className="w-2/3 xl:w-1/3">
-              <div className="w-full">
+            <div className="basis-2/3 lg:basis-1/3">
+              <div className="w-full md:w-4/5 lg:4/5">
                 <img src="absi-logo-full.png" />
               </div>
             </div>
-            <div className="grid place-items-center xl:hidden">
+            <div className="grid place-items-center lg:hidden">
               <FaBars className="text-3xl cursor-pointer" />
             </div>
-            <div className="hidden xl:flex w-2/3">
+            <div className="hidden lg:flex w-2/3">
               <div className="grid place-items-center basis-1/3">
                 <Link
                   to="/"
@@ -30,12 +30,14 @@ export function NavBar() {
                   Customer Portal
                 </Link>
               </div>
-              <div className="grid place-items-center basis-1/3 ring-2 ring-red-700">
-                <Link
-                  to="/"
-                  className="h-3/4 flex items-end text-lg font-bold pb-1">
-                  Customer Portal
-                </Link>
+              <div className="flex items-center justify-end basis-1/3">
+                <div className="h-4/5 flex items-end">
+                  <Link
+                    to="/"
+                    className="xl:text-lg font-bold bg-blue-950 py-2 px-6 rounded-md shadow-lg">
+                    Book a Consultation
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
