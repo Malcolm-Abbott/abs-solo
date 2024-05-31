@@ -3,9 +3,9 @@ import { FaBars } from 'react-icons/fa';
 
 export function NavBar() {
   return (
-    <>
-      <div className="container py-4 px-6">
-        <header>
+    <div>
+      <div className="container py-4">
+        <header className="px-6 relative">
           <div className="flex justify-between">
             <div className="basis-2/3 lg:basis-1/3">
               <div className="w-full md:w-4/5 lg:4/5">
@@ -15,7 +15,11 @@ export function NavBar() {
             <div className="grid place-items-center lg:hidden">
               <FaBars className="text-3xl cursor-pointer" />
             </div>
-            <div className="hidden lg:flex w-2/3">
+            <div className="hidden lg:flex basis-2/3">
+              <div className="absolute right-0 top-0 font-bold hidden xl:flex 2xl:top-4">
+                <span className="pr-6">(703) 661-4280</span>
+                <span>support@absi1.com</span>
+              </div>
               <div className="grid place-items-center basis-1/3">
                 <Link
                   to="/"
@@ -42,8 +46,8 @@ export function NavBar() {
             </div>
           </div>
         </header>
-        <Outlet />
       </div>
-    </>
+      <Outlet />
+    </div>
   );
 }
