@@ -9,7 +9,7 @@ export function NavBar() {
           <div className="flex justify-between">
             <div className="basis-2/3 lg:basis-1/3">
               <div className="w-full md:w-4/5 lg:4/5">
-                <img src="absi-logo-full.png" />
+                <img src="absi-logo-full.png" className="h-24" />
               </div>
             </div>
             <div className="grid place-items-center lg:hidden">
