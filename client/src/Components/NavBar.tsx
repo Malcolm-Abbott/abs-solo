@@ -9,14 +9,14 @@ export function NavBar() {
           <div className="flex justify-between">
             <div className="basis-2/3 lg:basis-1/3">
               <div className="w-full md:w-4/5 lg:4/5">
-                <img src="absi-logo-full.png" className="h-24" />
+                <img src="abs-logo-full.jpg" className="h-16 xl:h-24" />
               </div>
             </div>
             <div className="grid place-items-center lg:hidden">
               <FaBars className="text-3xl cursor-pointer" />
             </div>
             <div className="hidden lg:flex basis-2/3">
-              <div className="absolute right-0 top-0 font-bold hidden xl:flex 2xl:top-4">
+              <div className="absolute right-0 top-0 font-bold hidden xl:flex">
                 <span className="pr-6">(703) 661-4280</span>
                 <span>support@absi1.com</span>
               </div>
@@ -38,7 +38,7 @@ export function NavBar() {
                 <div className="h-4/5 flex items-end">
                   <Link
                     to="/"
-                    className="xl:text-lg font-bold bg-blue-950 py-2 px-6 rounded-md shadow-lg">
+                    className="xl:text-lg font-bold bg-blue-950 py-2 px-6 rounded-md shadow-lg text-white">
                     Book a Consultation
                   </Link>
                 </div>
