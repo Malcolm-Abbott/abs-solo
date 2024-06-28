@@ -1,7 +1,12 @@
 import { Outlet, Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 
-export function NavBar() {
+type Props = {
+  isOpen: boolean;
+  setIsOpen: (arg1: boolean) => void;
+};
+
+export function NavBar({ isOpen, setIsOpen }: Props) {
   return (
     <div>
       <div className="container py-4">
@@ -13,7 +18,10 @@ export function NavBar() {
               </div>
             </div>
             <div className="grid place-items-center lg:hidden">
-              <FaBars className="text-3xl cursor-pointer" />
+              <FaBars
+                className="text-3xl cursor-pointer"
+                onClick={() => setIsOpen(!isOpen)}
+              />
             </div>
             <div className="hidden lg:flex basis-2/3">
               <div className="absolute right-0 top-0 font-bold hidden xl:flex">

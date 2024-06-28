@@ -10,5 +10,3 @@ export function Banner() {
     </div>
   );
 }
-
-// className="basis-full text-white bg-blue-950 px-4 py-6 flex flex-wrap gap-2 sm:basis-1/2 "
