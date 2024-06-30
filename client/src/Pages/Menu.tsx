@@ -51,6 +51,8 @@ type MenuItemProps = {
 };
 
 function MenuItem({ name, style, isOpen, setIsOpen }: MenuItemProps) {
+  // Switch statement here evaluating if name is equal to string, set the to attribute on the Link element to the variable that will be declared in the switch statement
+
   if (name === 'Menu')
     return (
       <Link to="/" className="cursor-pointer">

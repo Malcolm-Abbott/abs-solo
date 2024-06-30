@@ -1,5 +1,8 @@
 import { Outlet, Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
+import { ServicesLinks } from './ServicesLinks';
+import { useState } from 'react';
+import { PortalLinks } from './PortalLinks';
 
 type Props = {
   isOpen: boolean;
@@ -7,6 +10,9 @@ type Props = {
 };
 
 export function NavBar({ isOpen, setIsOpen }: Props) {
+  const [isServicesActive, setIsServicesActive] = useState(false);
+  const [isPortalActive, setIsPortalActive] = useState(false);
+
   return (
     <div>
       <div className="container py-4">
@@ -28,19 +34,27 @@ export function NavBar({ isOpen, setIsOpen }: Props) {
                 <span className="pr-6">(703) 661-4280</span>
                 <span>support@absi1.com</span>
               </div>
-              <div className="grid place-items-center basis-1/3">
+              <div
+                className="grid place-items-center basis-1/3"
+                onMouseEnter={() => setIsServicesActive(true)}
+                onMouseLeave={() => setIsServicesActive(false)}>
                 <Link
                   to="/"
                   className="h-3/4 flex items-end text-lg font-bold pb-1">
-                  Services
+                  <span className="relative">Services</span>
                 </Link>
+                {isServicesActive && <ServicesLinks />}
               </div>
-              <div className="grid place-items-center basis-1/3">
+              <div
+                className="grid place-items-center basis-1/3"
+                onMouseEnter={() => setIsPortalActive(true)}
+                onMouseLeave={() => setIsPortalActive(false)}>
                 <Link
                   to="/"
                   className="h-3/4 flex items-end text-lg font-bold pb-1">
                   Customer Portal
                 </Link>
+                {isPortalActive && <PortalLinks />}
               </div>
               <div className="flex items-center justify-end basis-1/3">
                 <div className="h-4/5 flex items-end">
